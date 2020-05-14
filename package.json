@@ -1,0 +1,28 @@
+{
+  "name": "kip-puzzle-solver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev src/index.ts",
+    "filter": "ts-node-dev src/filterwords.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dussed/kip-puzzle-solver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dussed/kip-puzzle-solver/issues"
+  },
+  "homepage": "https://github.com/Dussed/kip-puzzle-solver#readme",
+  "dependencies": {
+    "@types/node": "^14.0.1",
+    "line-by-line": "^0.1.6",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.2"
+  }
+}
