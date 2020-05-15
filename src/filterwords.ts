@@ -22,6 +22,7 @@ const stream = createWriteStream('./filteredWords.txt');
 
 let readCount = 0;
 let validCount = 0;
+let longestWord = 0;
 
 lr.on('error', err => {
   console.log('err', err);
@@ -35,17 +36,18 @@ lr.on('line', line => {
     console.log(line, 'is valid');
     validCount++;
 
-    stream.write(line + '\n');
+    if (line.length > longestWord) longestWord = line.length;
 
+    stream.write(line.toLowerCase() + '\n');
   }
 
   readCount++;
 
-  lr.resume();// when done
+  lr.resume();
 });
 
 lr.on('end', () => {
-  console.log('All done! got', validCount, 'words, from', readCount);
+  console.log('All done! got', validCount, 'words, from', readCount, '. Longest world length was', longestWord);
   
   // Get outta here.
   // setTimeout(() => process.exit(0), 1000);

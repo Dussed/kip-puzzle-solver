@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev src/index.ts",
-    "filter": "ts-node-dev src/filterwords.ts"
+    "filter": "ts-node-dev src/filterwords.ts",
+    "categorise": "ts-node-dev src/categorise.ts"
   },
   "repository": {
     "type": "git",
